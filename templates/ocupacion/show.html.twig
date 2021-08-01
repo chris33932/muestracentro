@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Ocupacion{% endblock %}
+
+{% block body %}
+    <h1>Ocupacion</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ ocupacion.id }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ ocupacion.descripcion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('ocupacion_index') }}">back to list</a>
+
+    <a href="{{ path('ocupacion_edit', {'id': ocupacion.id}) }}">edit</a>
+
+    {{ include('ocupacion/_delete_form.html.twig') }}
+{% endblock %}
