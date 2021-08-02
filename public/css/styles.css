@@ -1,0 +1,10 @@
+
+.footerCentro {
+position: fixed;
+left: 0;
+bottom: 0;
+width: 100%;
+background-color: #c5cad1;
+color: gray;
+text-align: center;
+}

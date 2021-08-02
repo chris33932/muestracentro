@@ -1,11 +1,11 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Victima{% endblock %}
+{% block title %}{{ parent() }}Alta victima{% endblock %}
 
-{% block body %}
+{% block body %}{{ parent() }}
     <h1>Dar de alta nueva victima</h1>
 
     {{ include('victima/_form.html.twig') }}
 
-    <a href="{{ path('victima_index') }}">back to list</a>
+    <a href="{{ path('victima_index') }}">Volver a la lista</a>
 {% endblock %}

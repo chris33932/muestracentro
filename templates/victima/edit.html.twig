@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Victima{% endblock %}
+{% block title %}Editar registro{% endblock %}
 
-{% block body %}
-    <h1>Edit Victima</h1>
+{% block body %}{{ parent() }}
+    <h2>Editar registro</h2>
 
-    {{ include('victima/_form.html.twig', {'button_label': 'Update'}) }}
+    {{ include('victima/_form.html.twig', {'button_label': 'Actualizar'}) }}
 
-    <a href="{{ path('victima_index') }}">back to list</a>
+    <a href="{{ path('victima_index') }}">Volver a la lista</a>
 
     {{ include('victima/_delete_form.html.twig') }}
 {% endblock %}

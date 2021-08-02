@@ -1,12 +1,17 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Sexo index{% endblock %}
+{% block title %}{{ parent() }}{% endblock %}
 
-{% block body %}
-    <h1>Sexo index</h1>
+{% block body %}{{ parent() }}
+<br>
 
-    <table class="table">
-        <thead>
+<div class="container">
+   <h2>Sexo categorias</h2>
+  <p>Lista de categorias para la variable sexo:</p>    
+   <br>        
+  <table class="table">
+    <thead class="thead-light">
+ 
             <tr>
                 <th>Id</th>
                 <th>Descripcion</th>
