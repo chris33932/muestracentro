@@ -1,13 +1,13 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Edit Sexo{% endblock %}
+{% block title %}Editar{% endblock %}
 
-{% block body %}
-    <h1>Edit Sexo</h1>
+{% block body %}{{ parent() }}
+    <h2>Editar categoria</h2>
 
     {{ include('sexo/_form.html.twig', {'button_label': 'Update'}) }}
 
-    <a href="{{ path('sexo_index') }}">back to list</a>
+    <a href="{{ path('sexo_index') }}">Volver</a>
 
     {{ include('sexo/_delete_form.html.twig') }}
 {% endblock %}

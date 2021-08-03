@@ -2,7 +2,7 @@
 
 {% block title %}New TipoDocumento{% endblock %}
 
-{% block body %}
+{% block body %}{{ parent() }}
     <h1>Create new TipoDocumento</h1>
 
     {{ include('tipo_documento/_form.html.twig') }}

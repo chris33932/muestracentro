@@ -1,16 +1,19 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Genero index{% endblock %}
+{% block title %}{{ parent() }}-Genero{% endblock %}
 
-{% block body %}
-    <h1>Genero index</h1>
-
+{% block body %}{{ parent() }}
+<div class="container">
+    <h2>Genero</h2>
+    <h4>Lista de categorías para la variable género: </h4>    
+  <br>   
+  <div class="table-responsive-sm">
     <table class="table">
-        <thead>
-            <tr>
+        <thead class="thead-light">
+                <tr>
                 <th>Id</th>
                 <th>Descripcion</th>
-                <th>actions</th>
+                <th>Acción</th>
             </tr>
         </thead>
         <tbody>
@@ -30,6 +33,8 @@
         {% endfor %}
         </tbody>
     </table>
+</div>
 
     <a href="{{ path('genero_new') }}">Create new</a>
+</div>
 {% endblock %}

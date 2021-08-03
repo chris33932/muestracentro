@@ -1,11 +1,12 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}New Genero{% endblock %}
+{% block title %}{{ parent() }}Alta Genero{% endblock %}
 
-{% block body %}
-    <h1>Create new Genero</h1>
+{% block body %}{{ parent() }}
+    <h3>Crear nueva categoría para Genero</h3>
 
     {{ include('genero/_form.html.twig') }}
 
-    <a href="{{ path('genero_index') }}">back to list</a>
+    <a href="{{ path('genero_index') }}"class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-step-backward"></span>Volver</a>
 {% endblock %}

@@ -2,7 +2,7 @@
 
 {% block title %}Edit TipoDocumento{% endblock %}
 
-{% block body %}
+{% block body %}{{ parent() }}
     <h1>Edit TipoDocumento</h1>
 
     {{ include('tipo_documento/_form.html.twig', {'button_label': 'Update'}) }}

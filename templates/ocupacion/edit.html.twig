@@ -2,8 +2,8 @@
 
 {% block title %}Edit Ocupacion{% endblock %}
 
-{% block body %}
-    <h1>Edit Ocupacion</h1>
+{% block body %}{{ parent() }}
+    <h1>Editar</h1>
 
     {{ include('ocupacion/_form.html.twig', {'button_label': 'Update'}) }}
 

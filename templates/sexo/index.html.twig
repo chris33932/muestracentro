@@ -15,7 +15,7 @@
             <tr>
                 <th>Id</th>
                 <th>Descripcion</th>
-                <th>actions</th>
+                <th>acción</th>
             </tr>
         </thead>
         <tbody>
@@ -24,8 +24,9 @@
                 <td>{{ sexo.id }}</td>
                 <td>{{ sexo.descripcion }}</td>
                 <td>
-                    <a href="{{ path('sexo_show', {'id': sexo.id}) }}">show</a>
-                    <a href="{{ path('sexo_edit', {'id': sexo.id}) }}">edit</a>
+                    <a href="{{ path('sexo_show', {'id': sexo.id}) }}" class="btn btn-info btn-sm" alt="Ver"><span class="glyphicon glyphicon-eye-open"></span> Ver</a>
+                    <a href="{{ path('sexo_edit', {'id': sexo.id}) }}" class="btn btn-warning btn-sm"
+                         alt="Editar"><span class="glyphicon glyphicon-pencil"></span> Modificar</a>
                 </td>
             </tr>
         {% else %}
@@ -36,5 +37,6 @@
         </tbody>
     </table>
 
-    <a href="{{ path('sexo_new') }}">Create new</a>
+    <a href="{{ path('sexo_new') }}"class="btn btn-primary btn-sm" alt="Nuevo">
+                        <span class="glyphicon glyphicon-plus"></span> Nuevo</a>
 {% endblock %}

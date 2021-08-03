@@ -1,16 +1,21 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Ocupacion index{% endblock %}
+{% block title %}{% endblock %}
 
-{% block body %}
-    <h1>Ocupacion index</h1>
+{% block body %}{{ parent() }}
 
+<br>
+   
+<div class="container">
+<h2>Ocupación</h2>
+  <p>Lista de categorias para la variable Ocupacion:</p>    
+   <br> 
     <table class="table">
-        <thead>
+        <thead class="thead-light">
             <tr>
                 <th>Id</th>
                 <th>Descripcion</th>
-                <th>actions</th>
+                <th>Acción</th>
             </tr>
         </thead>
         <tbody>
@@ -19,8 +24,9 @@
                 <td>{{ ocupacion.id }}</td>
                 <td>{{ ocupacion.descripcion }}</td>
                 <td>
-                    <a href="{{ path('ocupacion_show', {'id': ocupacion.id}) }}">show</a>
-                    <a href="{{ path('ocupacion_edit', {'id': ocupacion.id}) }}">edit</a>
+                    <a href="{{ path('ocupacion_show', {'id': ocupacion.id}) }}" class="btn btn-info btn-sm" alt="Ver"><span class="glyphicon glyphicon-eye-open"></span> Ver</a>
+                    <a href="{{ path('ocupacion_edit', {'id': ocupacion.id}) }}" class="btn btn-warning btn-sm"
+                         alt="Editar"><span class="glyphicon glyphicon-pencil"></span> Modificar</a>
                 </td>
             </tr>
         {% else %}
@@ -31,5 +37,7 @@
         </tbody>
     </table>
 
-    <a href="{{ path('ocupacion_new') }}">Create new</a>
+    <a href="{{ path('ocupacion_new') }}"class="btn btn-primary btn-sm" alt="Nuevo">
+                        <span class="glyphicon glyphicon-plus"></span> Nuevo</a>
+</div>
 {% endblock %}

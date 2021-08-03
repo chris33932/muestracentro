@@ -2,7 +2,7 @@
 
 {% block title %}Edit Genero{% endblock %}
 
-{% block body %}
+{% block body %}{{ parent() }}
     <h1>Edit Genero</h1>
 
     {{ include('genero/_form.html.twig', {'button_label': 'Update'}) }}

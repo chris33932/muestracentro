@@ -3,9 +3,10 @@
 {% block title %}{{ parent() }}Alta victima{% endblock %}
 
 {% block body %}{{ parent() }}
-    <h1>Dar de alta nueva victima</h1>
+    <h2>Dar de alta nueva victima</h2>
 
     {{ include('victima/_form.html.twig') }}
 
-    <a href="{{ path('victima_index') }}">Volver a la lista</a>
+    <a href="{{ path('victima_index') }}" class="btn btn-default btn-sm">
+          <span class="glyphicon glyphicon-step-backward"></span>Volver</a>
 {% endblock %}
