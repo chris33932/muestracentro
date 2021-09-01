@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New DiaSemana{% endblock %}
+
+{% block body %}
+    <h1>Create new DiaSemana</h1>
+
+    {{ include('dia_semana/_form.html.twig') }}
+
+    <a href="{{ path('dia_semana_index') }}">back to list</a>
+{% endblock %}

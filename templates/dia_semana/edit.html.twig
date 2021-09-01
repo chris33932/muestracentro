@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit DiaSemana{% endblock %}
+
+{% block body %}
+    <h1>Edit DiaSemana</h1>
+
+    {{ include('dia_semana/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('dia_semana_index') }}">back to list</a>
+
+    {{ include('dia_semana/_delete_form.html.twig') }}
+{% endblock %}

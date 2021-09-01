@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Edit FuncionMomentoHecho{% endblock %}
+
+{% block body %}
+    <h1>Edit FuncionMomentoHecho</h1>
+
+    {{ include('funcion_momento_hecho/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('funcion_momento_hecho_index') }}">back to list</a>
+
+    {{ include('funcion_momento_hecho/_delete_form.html.twig') }}
+{% endblock %}

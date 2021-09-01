@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}FranjaHoraria{% endblock %}
+
+{% block body %}
+    <h1>FranjaHoraria</h1>
+
+    <table class="table">
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ franja_horarium.id }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ franja_horarium.descripcion }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a href="{{ path('franja_horaria_index') }}">back to list</a>
+
+    <a href="{{ path('franja_horaria_edit', {'id': franja_horarium.id}) }}">edit</a>
+
+    {{ include('franja_horaria/_delete_form.html.twig') }}
+{% endblock %}

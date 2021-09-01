@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New FuncionMomentoHecho{% endblock %}
+
+{% block body %}
+    <h1>Create new FuncionMomentoHecho</h1>
+
+    {{ include('funcion_momento_hecho/_form.html.twig') }}
+
+    <a href="{{ path('funcion_momento_hecho_index') }}">back to list</a>
+{% endblock %}
